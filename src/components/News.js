@@ -1,0 +1,254 @@
+import React, { Component } from 'react'
+import NewsItem from './NewsItem'
+
+export class News extends Component {
+
+    articles = [
+        {
+          "source": { "id": null, "name": "Moneycontrol" },
+          "author": "Sandip Das",
+          "title": "Market Live Updates: Indices trade low amid volatility, Sensex down around 700 points, Nifty around... - Moneycontrol",
+          "description": "Stock Market Live Updates: All sectoral and broader indices under pressure, Nifty IT the biggest loser along with metals and banks",
+          "url": "https://www.moneycontrol.com/news/business/markets/market-live-updates-sgx-nifty-indicates-a-gap-down-opening-for-indian-indices-9-8667081.html",
+          "urlToImage": "https://images.moneycontrol.com/static-mcnews/2022/05/stocks_market-stock_stock-4-770x433.jpg",
+          "publishedAt": "2022-06-10T04:33:02Z",
+          "content": "June 10, 2022 / 08:12 AM IST\r\nOil falls on demand worries over Shanghai's new partial lockdowns:\r\nOil prices fell on Friday but still hovered near three-month highs, with fears over new COVID-19 lock… [+354 chars]"
+        },
+        {
+          "source": { "id": null, "name": "News18" },
+          "author": "Buzz Staff",
+          "title": "Scientists Have Detected Second Mysterious Radio Signal Coming From Space - News18",
+          "description": "The researchers have detected a new Fast Radio Bursts (FRB), which has been termed FRB 20190520B.",
+          "url": "https://www.news18.com/news/buzz/scientists-have-detected-second-mysterious-radio-signal-coming-from-space-5344063.html",
+          "urlToImage": "https://images.news18.com/ibnlive/uploads/2022/06/radio-signals-165483464216x9.png",
+          "publishedAt": "2022-06-10T04:18:40Z",
+          "content": "In what comes as a strange discovery, astronomers have detected a radio signal coming from another galaxy, which happens to be nearly 3 billion light-years away from Earth. However, this is not the f… [+2488 chars]"
+        },
+        {
+          "source": { "id": null, "name": "Sportskeeda" },
+          "author": "Ashim",
+          "title": "5 ways to get free diamonds for Free Fire MAX Elite Pass in June 2022 - Sportskeeda",
+          "description": "It has been almost ten days since the new Free Fire MAX Elite Pass season began, and most users have already maximized their tiers by grinding hard.",
+          "url": "https://www.sportskeeda.com/free-fire/5-ways-get-free-diamonds-free-fire-max-elite-pass-june-2022",
+          "urlToImage": "https://staticg.sportskeeda.com/editor/2022/06/57cbf-16548296300169-1920.jpg",
+          "publishedAt": "2022-06-10T04:10:08Z",
+          "content": "It has been almost ten days since the new Free Fire MAX Elite Pass season began, and most users have already maximized their tiers by grinding hard. However, many still haven't purchased the Elite Pa… [+3142 chars]"
+        },
+        {
+          "source": { "id": null, "name": "Hindustan Times" },
+          "author": "Shishir Gupta",
+          "title": "Taliban to act against Pak LeT/JeM terrorists in Afghanistan on specific intel - Hindustan Times",
+          "description": "The Taliban top leadership has assured the Modi government that it will not allow Al Qaeda or Pak based terrorist groups to target India and will act against them on basis of actionable intelligence. | World News",
+          "url": "https://www.hindustantimes.com/world-news/taliban-to-act-against-pak-let-jem-terrorists-in-afghanistan-on-specific-indian-101654831818094.html",
+          "urlToImage": "https://images.hindustantimes.com/img/2022/06/10/1600x900/taliban_to_act_against_jaish_lashkar_terrorists_1654832854905_1654832855114.jpg",
+          "publishedAt": "2022-06-10T03:50:26Z",
+          "content": "During the bilateral meeting in Kabul last week, the Taliban top leadership assured India that it will not allow terrorism against third country from its soil but also act against terrorists of Pak-b… [+2763 chars]"
+        },
+        {
+          "source": { "id": null, "name": "NDTV News" },
+          "author": "NDTV News Desk",
+          "title": "Coronavirus LIVE Updates: India Records 7,584 New COVID-19 Cases In 24 Hours - NDTV",
+          "description": "India reported a total of 7,584 new coronavirus infections in the last 24 hours, taking the total number of COVID-19 cases in the country to 4,32,05,106, the Health Ministry said.",
+          "url": "https://www.ndtv.com/india-news/coronavirus-india-live-updates-coronavirus-cases-today-covid-19-cases-in-india-omicron-covid-cases-india-covid-cases-10-june-3054373",
+          "urlToImage": "https://c.ndtvimg.com/2021-06/6i1ieuso_india-covid-afp_625x300_03_June_21.jpg",
+          "publishedAt": "2022-06-10T03:48:13Z",
+          "content": "India Covid Live: At least 8 people died due to coronavirus on Thursday.\r\nNew Delhi: India reported a total of 7,584 new coronavirus infections in the last 24 hours, taking the total number of COVID-… [+1496 chars]"
+        },
+        {
+          "source": { "id": null, "name": "The Indian Express" },
+          "author": "Bloomberg",
+          "title": "Apple plans 15-inch MacBook Air for 2023 and new 12-inch laptop - The Indian Express",
+          "description": "Apple is working on a larger MacBook Air with a 15-inch screen for release as early as next spring. It also plans to launch a new 12-inch laptop by the end of 2023 or in early 2024.",
+          "url": "https://indianexpress.com/article/technology/tech-news-technology/apple-plans-15-inch-macbook-air-for-2023-and-new-12-inch-laptop-7961670/",
+          "urlToImage": "https://images.indianexpress.com/2022/06/Apple_MacBookAir_2022.jpg",
+          "publishedAt": "2022-06-10T03:31:12Z",
+          "content": "Apple Inc plans to expand the lineup of laptops using its new, speedier in-house chips next year, aiming to grab a bigger share of the market, people with knowledge of the matter said.The company is … [+3841 chars]"
+        },
+        {
+          "source": { "id": null, "name": "NDTV News" },
+          "author": "Abhishek Paul",
+          "title": "\"Disappointed To Not See...\": Mohammad Kaif Is Surprised To See This Star Missing From India T20I Sq.. - NDTV Sports",
+          "description": "Former Indian cricket team player Mohammed Kaif is surprised to see this player missing from the squad",
+          "url": "https://sports.ndtv.com/india-vs-south-africa-2022/disappointed-to-not-see-mohammad-kaif-is-surprised-to-see-this-star-missing-from-india-t20i-squad-vs-south-africa-3054434",
+          "urlToImage": "https://c.ndtvimg.com/2022-06/0vclssi8_team-india-bcci_625x300_10_June_22.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=675",
+          "publishedAt": "2022-06-10T03:28:58Z",
+          "content": "Several senior players have been rested for India's T20I squad for the five-match series against South Africa. The team bears a fresh look as veterans like Dinesh Karthik and Hardik Pandya have made … [+2005 chars]"
+        },
+        {
+          "source": { "id": null, "name": "Hindustan Times" },
+          "author": "HT News Desk",
+          "title": "Spain to begin monkeypox vaccination; global tally passes 1,000: Top updates - Hindustan Times",
+          "description": "The World Health Organization (WHO) has already identified nearly 1,000 cases so far since the outbreak was registered by \"non-endemic \" countries. | World News",
+          "url": "https://www.hindustantimes.com/world-news/spain-to-begin-monkeypox-vaccination-global-tally-passes-1-000-top-updates-101654830512126.html",
+          "urlToImage": "https://images.hindustantimes.com/img/2022/06/10/1600x900/HEALTH-MONKEYPOX-USA-0_1654830618419_1654830625869.JPG",
+          "publishedAt": "2022-06-10T03:10:55Z",
+          "content": "Amid global spread of monkeypox, Brazil has become the latest country to report its first case of a patient infected with the virus. A 41-year-old infected man had travelled to both Spain and Portuga… [+2445 chars]"
+        },
+        {
+          "source": { "id": null, "name": "Hindustan Times" },
+          "author": "HT Entertainment Desk",
+          "title": "Mahima Chaudhry says her daughter didn’t go to school during her cancer recovery - Hindustan Times",
+          "description": "Mahima Chaudhry has revealed her daughter Ariana chose to not go to school as they reopened after the pandemic so as not to get her mom infected during her cancer treatment.",
+          "url": "https://www.hindustantimes.com/entertainment/bollywood/mahima-chaudhry-says-her-daughter-didn-t-go-to-school-during-her-cancer-recovery-she-didn-t-want-to-risk-covid-101654827738803.html",
+          "urlToImage": "https://images.hindustantimes.com/img/2022/06/10/1600x900/mahima_chaudhary_1654829529967_1654829543774.jpg",
+          "publishedAt": "2022-06-10T03:08:51Z",
+          "content": "Mahima Chaudhry is currently working on her comeback film, The Signature. Her fans and friends recently learned about her cancer diagnosis and recovery from the video shared by actor Anupam Kher on I… [+1727 chars]"
+        },
+        {
+          "source": { "id": null, "name": "NDTV News" },
+          "author": null,
+          "title": "Ukraine Exhausts Russian Weaponry, Dependent On Arms From Allies: Report - NDTV",
+          "description": "Ukraine has depleted its Soviet and Russian-designed weaponry and is now completely dependent on allies for arms to defend against Russia's invasion, US military sources say.",
+          "url": "https://www.ndtv.com/world-news/ukraine-exhausts-russian-weaponry-dependent-on-arms-from-allies-report-3054444",
+          "urlToImage": "https://c.ndtvimg.com/2022-06/u1qk9ct_russia-ukraine-reuters_625x300_08_June_22.jpg",
+          "publishedAt": "2022-06-10T03:05:20Z",
+          "content": "Now, Kyiv's forces are using, or learning to use, arms wielded by US and European NATO allies.\r\nWashington: Ukraine has depleted its Soviet and Russian-designed weaponry and is now completely depende… [+3663 chars]"
+        },
+        {
+          "source": { "id": "the-times-of-india", "name": "The Times of India" },
+          "author": "AP",
+          "title": "NASA not shying away from reputational risk, launches study of UFOs - Economic Times",
+          "description": "The space agency wants to understand the reason behind the unexplained sightings.",
+          "url": "https://economictimes.indiatimes.com/magazines/panache/nasa-not-shying-away-from-reputational-risk-launches-study-of-ufos/articleshow/92117584.cms",
+          "urlToImage": "https://img.etimg.com/thumb/msid-92117698,width-1070,height-580,imgsize-18126,overlay-etpanache/photo.jpg",
+          "publishedAt": "2022-06-10T02:57:00Z",
+          "content": "CAPE CANAVERAL: NASA is launching a study of UFOs as part of a new push toward high-risk, high-impact science. \r\nThe space agency announced Thursday that it's setting up an independent team to see ho… [+1427 chars]"
+        },
+        {
+          "source": { "id": null, "name": "NDTV News" },
+          "author": null,
+          "title": "BJP MLA's Daughter Jumps Signal In BMW, Allegedly Misbehaves With Cops - NDTV",
+          "description": "The daughter of a BJP MLA allegedly misbehaved with Bengaluru policemen after she jumped a traffic signal in a BMW.",
+          "url": "https://www.ndtv.com/bangalore-news/bengaluru-bjp-mlas-daughter-jumps-signal-in-bmw-fined-for-rash-driving-3053640",
+          "urlToImage": "https://c.ndtvimg.com/2022-06/40cgesi8_bmw-mla-daughter_625x300_09_June_22.jpg",
+          "publishedAt": "2022-06-10T02:30:00Z",
+          "content": "The BJP MLA's daughter driving a BMW was made to pay fine, sources said\r\nBengaluru: The daughter of a BJP MLA allegedly misbehaved with Bengaluru policemen after she jumped a traffic signal in a BMW.… [+803 chars]"
+        },
+        {
+          "source": { "id": null, "name": "Gadgets Now" },
+          "author": "Gadgets Now Bureau",
+          "title": "6 big features your iPhones will get with iOS 16 that Apple didn't talk about - Gadgets Now",
+          "description": "Apple this week unveiled iOS16, the new-generation of its mobile operating system, at its annual Worldwide Developers Conference (WWDC 2022). The all-new iOS16 supports iPhone 8 and later iPhones. The new Apple OS for iPhones offers a range of new features in…",
+          "url": "https://www.gadgetsnow.com/slideshows/6-big-features-your-iphones-will-get-with-ios-16-that-apple-didnt-talk-about/photolist/92116693.cms",
+          "urlToImage": "https://static.toiimg.com/thumb/msid-92116790,width-800,resizemode-4,imgsize-15862/share.jpg",
+          "publishedAt": "2022-06-10T02:15:00Z",
+          "content": "Ever since Apple introduced the world to memojis in 2017 with iPhone X, it has been bringing some customizations to them every year. This time, Apple is making your Memojis more trendy with new hairs… [+283 chars]"
+        },
+        {
+          "source": { "id": null, "name": "Hindustan Times" },
+          "author": "HT News Desk",
+          "title": "AIMIM backs MVA Rajya Sabha candidates in Maharashtra: ‘Laid certain conditions’ - Hindustan Times",
+          "description": "Every vote has become crucial after BJP decided to field its third candidate in the election. | Latest News India",
+          "url": "https://www.hindustantimes.com/india-news/aimim-backs-mva-rajya-sabha-candidates-in-maharashtra-laid-certain-conditions-101654822522327.html",
+          "urlToImage": "https://images.hindustantimes.com/img/2022/06/10/1600x900/aimim_to_vote_for_mva_candidates_in_maharashtra_1654825930131_1654825930331.jpg",
+          "publishedAt": "2022-06-10T01:58:27Z",
+          "content": "All India Majilis-e-Ittehadul Muslimeen (AIMIM) has decided to vote for the Maha Vikas Aghadi (MVA) candidates in the Rajya Sabha elections in Maharashtra, the party's state unit president Imtiaz Jal… [+1736 chars]"
+        },
+        {
+          "source": { "id": null, "name": "NDTV News" },
+          "author": null,
+          "title": "Voting In Crucial Rajya Sabha Polls Today, Tight Contest In 4 States: 10 Points - NDTV",
+          "description": "Elections will be held to fill 16 vacant seats in Rajya Sabha, the upper house of parliament, today. 41 candidates have been elected unopposed. The election will be crucial in view of the Presidential elections due in July.",
+          "url": "https://www.ndtv.com/india-news/voting-in-crucial-rajya-sabha-polls-today-tight-contests-in-2-states-top-10-3054381",
+          "urlToImage": "https://c.ndtvimg.com/2019-07/ufqclhug_parliament-generic-reuters_625x300_31_July_19.jpg",
+          "publishedAt": "2022-06-10T01:50:07Z",
+          "content": "<li>Election is due on 16 seats in Maharashtra, Karnataka, Rajasthan and Haryana.\r\n</li><li>The 57 vacant seats were spread across 15 states. Of these, the BJP held 23 seats and eight were held by Co… [+1517 chars]"
+        },
+        {
+          "source": { "id": null, "name": "Hindustan Times" },
+          "author": "Aritra Mukherjee",
+          "title": "Can't ask them to drop Rohit Sharma or KL Rahul and prefer me as opener: Ishan - Hindustan Times",
+          "description": "Ishan Kishan slammed a brilliant 76 off 48 balls in the first T20I against South Africa but the visitors secured a seven-wicket win in Delhi.",
+          "url": "https://www.hindustantimes.com/cricket/cant-ask-them-to-drop-rohit-sharma-or-kl-rahul-and-prefer-me-as-opener-ishan-kishan-after-fiery-fifty-vs-south-africa-101654824649923.html",
+          "urlToImage": "https://images.hindustantimes.com/img/2022/06/10/1600x900/PTI06-09-2022-000183B-0_1654824959167_1654824974409.jpg",
+          "publishedAt": "2022-06-10T01:37:25Z",
+          "content": "Two of Ishan Kishan's first three boundaries came from thick outside edges. He was beaten five times - some because of genuine movement from the pitch, the rest due to him trying to force the issue -… [+3003 chars]"
+        },
+        {
+          "source": { "id": null, "name": "The Tribune India" },
+          "author": "The Tribune India",
+          "title": "Lawrence Bishnoi gang delivered threat letter for Salman Khan, plan was to extort money from him: Police - The Tribune India",
+          "description": "Three members of the Lawrence Bishnoi gang delivered a letter threatening Bollywood actor Salman Khan and his father, writer Salim Khan, and it was part of gangster Vikram Brar&rsquo;s plan to terrorise them and extort money from them, police claimed on Thurs…",
+          "url": "https://www.tribuneindia.com/news/nation/members-of-lawrence-bishnoi-gang-delivered-threat-letter-for-salman-khan-police-402471",
+          "urlToImage": "https://englishtribuneimages.blob.core.windows.net/gallary-content/2022/6/2022_6$largeimg_930771378.JPG",
+          "publishedAt": "2022-06-10T01:24:00Z",
+          "content": "PTI\r\nMumbai/Pune, June 9\r\nThree members of the Lawrence Bishnoi gang delivered a letter threatening Bollywood actor Salman Khan and his father, writer Salim Khan, and it was part of gangster Vikram B… [+2553 chars]"
+        },
+        {
+          "source": { "id": null, "name": "Hindustan Times" },
+          "author": "HT Entertainment Desk",
+          "title": "When Mika Singh left Daler Mehndi's crew for solo career, he cried for four days - Hindustan Times",
+          "description": "In 2009, Daler Mehndi had spoken about when brother Mika Singh's decision to leave his crew and start a solo career and how it left him heartbroken.",
+          "url": "https://www.hindustantimes.com/entertainment/music/when-mika-singh-left-brother-daler-mehndi-s-crew-for-solo-career-he-cried-for-four-days-dukh-tha-alag-ho-raha-hai-101654791780574.html",
+          "urlToImage": "https://images.hindustantimes.com/img/2022/06/09/1600x900/Daler_Mika_1654792435379_1654792448470.webp",
+          "publishedAt": "2022-06-10T01:12:44Z",
+          "content": "Mika Singh has carved a name for himself in the music industry over the two decades that he has been active. The singer has given several chartbusters over the years, both in films and as albums and … [+2505 chars]"
+        },
+        {
+          "source": { "id": null, "name": "soompi" },
+          "author": "eclipse01",
+          "title": "BTS Shares Thoughts Ahead Of Comeback With New Album “Proof” - soompi",
+          "description": "With just a few hours left until its release, the members of BTS have shared their thoughts on their highly-anticipated new album “Proof“! “Proof,” which is due out on June 10 at 1 p.m. KST, is a three-CD anthology album that will feature three brand-new song…",
+          "url": "https://www.soompi.com/article/1530306wpp/bts-shares-thoughts-ahead-of-release-of-new-album-proof",
+          "urlToImage": "https://6.viki.io/image/58cd88b8e0eb430c9c79195cf8c54ff8/dummy.jpeg?s=900x600&e=t",
+          "publishedAt": "2022-06-10T00:54:44Z",
+          "content": "With just a few hours left until its release, the members of BTS have shared their thoughts on their highly-anticipated new album Proof!\r\nProof, which is due out on June 10 at 1 p.m. KST, is a three-… [+3293 chars]"
+        },
+        {
+          "source": { "id": null, "name": "The New Indian Express" },
+          "author": "Express News Service",
+          "title": "Dengue: Health dept calls for anti-mosquito measures in Ernakulam - The New Indian Express",
+          "description": "With dengue cases rising in Ernakulam district, the health department has urged the public to practice self-hygiene and to adopt safety measures against mosquito bites.",
+          "url": "https://www.newindianexpress.com/cities/kochi/2022/jun/10/dengue-health-dept-calls-for-anti-mosquito-measures-in-ernakulam-2463756.html",
+          "urlToImage": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/3/14/w600X390/Dengue_Express_Illustrations.jpg",
+          "publishedAt": "2022-06-10T00:53:00Z",
+          "content": "KOCHI: With dengue cases rising in Ernakulam district, the health department has urged the public to practice self-hygiene and to adopt safety measures against mosquito bites. According to the data w… [+1016 chars]"
+        }
+      ]
+    constructor(){
+        super();
+        console.log("Hello I am a constructor from the News component");
+        this.state = {
+            articles: this.articles,
+            loading: false
+        }
+    }
+
+    async componentDidMount(){
+      //This particular component will run after the render method will execute perfectly
+      //console.log("cdm");
+      let url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=f4759245c9744ac1b4c2a7e52ba3a7ed";
+      let data = await fetch(url);
+      let parsedData = await data.json();
+      console.log(parsedData);
+      this.setState({articles: parsedData.articles})
+    }
+
+
+  render() {
+    //console.log("render");
+    return (
+      <div className="container my-3 mx-30">
+          <h2><center>The Hindu XC - Top Headlines</center></h2>
+          
+          <div className="row">
+          {this.state.articles.map((element)=>{
+              return <div className="col-md-4" key={element.url}>
+              <NewsItem title={element.title?element.title.slice(0,45):" "} description={element.description?element.description.slice(0,88):" "} imageUrl={element.urlToImage} newsUrl={element.url}/>
+              </div>
+          })}
+              
+          
+          
+          
+          
+
+          
+          </div>
+
+      </div>
+    )
+  }
+}
+
+export default News
