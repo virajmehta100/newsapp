@@ -81,7 +81,7 @@ export class News extends Component {
           <h2><center>The Hindu XC - Top Headlines</center></h2>
           {this.state.loading && <Spinner/>}
           <div className="row">
-          {this.state.articles.map((element)=>{
+          {!this.state.loading && this.state.articles.map((element)=>{
               return <div className="col-md-4" key={element.url}>
               <NewsItem title={element.title?element.title:" "} description={element.description?element.description:" "} imageUrl={element.urlToImage} newsUrl={element.url}/>
               </div>
